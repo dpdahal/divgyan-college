@@ -6,7 +6,10 @@
 @yield('head')
 @yield('top-header')
 @yield('header')
+
+{{--=======main seection =======--}}
 @yield('content')
+{{--=======end main section========--}}
 
 @yield('footer')
 
