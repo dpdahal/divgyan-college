@@ -20,6 +20,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
         Route::get('/', [SuperAdminController::class, 'index'])->name('super-admin');
         Route::get('/add-super-admin', [SuperAdminController::class, 'add'])->name('add-super-admin');
         Route::post('/add-super-admin', [SuperAdminController::class, 'addAdmin']);
+        Route::get('/delete-super-admin/{criteria?}', [SuperAdminController::class, 'delete'])->name('delete-super-admin');
+        Route::get('/edit-super-admin/{criteria?}', [SuperAdminController::class, 'edit'])->name('edit-super-admin');
     });
 
 });
